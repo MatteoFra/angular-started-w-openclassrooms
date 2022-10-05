@@ -13,6 +13,7 @@ import { LandingPageComponent } from './components/landing-page/landing-page.com
 import { SingleFaceSnapComponent } from './components/single-face-snap/single-face-snap.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NewFaceSnapComponent } from './components/new-face-snap/new-face-snap.component';
+import { httpInterceptorProviders } from './interceptors';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,10 @@ import { NewFaceSnapComponent } from './components/new-face-snap/new-face-snap.c
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [{ provide: LOCALE_ID, useValue: 'fr-FR' }],
+  providers: [
+    { provide: LOCALE_ID, useValue: 'fr-FR' },
+    httpInterceptorProviders
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {
