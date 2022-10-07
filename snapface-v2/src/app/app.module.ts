@@ -11,7 +11,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CoreModule } from './core/core.module';
 import { FaceSnapsModule } from './face-snaps/face-snaps.module';
 import { LandingPageModule } from './landing-page/landing-page.module';
+<<<<<<< HEAD
 import { AuthModule } from './auth/auth.module';
+=======
+>>>>>>> 63ca85618bb770be65d256de0e3faec9dfd69583
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { AuthModule } from './auth/auth.module';
     CoreModule,
     LandingPageModule,
     HttpClientModule,
+<<<<<<< HEAD
     AuthModule
+=======
+>>>>>>> 63ca85618bb770be65d256de0e3faec9dfd69583
   ],
   providers: [],
   bootstrap: [AppComponent],
