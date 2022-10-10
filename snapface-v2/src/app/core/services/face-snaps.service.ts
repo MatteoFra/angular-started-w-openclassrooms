@@ -10,12 +10,12 @@ export class FaceSnapsService {
   constructor(private http: HttpClient) {}
   
   getAllFaceSnaps(): Observable<FaceSnap[]> {
-    return this.http.get<FaceSnap[]>('http://localhost:3000/facesnaps');
+    return this.http.get<FaceSnap[]>('http://localhost:4000/facesnaps');
   }
 
   getFaceSnapById(faceSnapId: number): Observable<FaceSnap> {
     return this.http.get<FaceSnap>(
-      `http://localhost:3000/facesnaps/${faceSnapId}`
+      `http://localhost:4000/facesnaps/${faceSnapId}`
     );
   }
 
@@ -30,7 +30,7 @@ export class FaceSnapsService {
       })),
       switchMap((updatedFaceSnap) =>
         this.http.put<FaceSnap>(
-          `http://localhost:3000/facesnaps/${faceSnapId}`,
+          `http://localhost:4000/facesnaps/${faceSnapId}`,
           updatedFaceSnap
         )
       )
@@ -48,7 +48,7 @@ export class FaceSnapsService {
             id: previousFacesnap.id + 1
         })),
         switchMap(newFacesnap => this.http.post<FaceSnap>(
-            'http://localhost:3000/facesnaps',
+            'http://localhost:4000/facesnaps',
             newFacesnap)
         )
     );
